@@ -8,38 +8,41 @@
     <title>Triangle</title>
   </head>
   <body>
-    <div class = "row">
-      <div class = "col-md-3">
-        <form id="selector">
-          <h1>Enter Side Lengths</h1>
-          <div class="form-group">
-            <input id = "sideA" class="form-control" name="sideA" type="number" placeholder="SideA"></input>
-          </div>
-          <div class="form-group">
-            <input id = "sideB" class="form-control" name="sideB" type="number" placeholder="SideB"></input>
-          </div>
-          <div class="form-group">
-            <input id = "sideC" class="form-control" name="sideC" type="number" placeholder="SideC"></input>
-          </div>
-          <button type="submit" class="btn btn-focus">Submit</button>
-        </form>
+    <div class ="container">
+      <div class = "row top-row">
+        <div class = "col-md-3">
+          <form id="selector">
+            <h1>Enter Side Lengths</h1>
+            <div class="form-group">
+              <input id = "sideA" class="form-control" name="sideA" type="number" min="1" max="1000" placeholder="SideA"></input>
+            </div>
+            <div class="form-group">
+              <input id = "sideB" class="form-control" name="sideB" type="number" min="1" max="1000" placeholder="SideB"></input>
+            </div>
+            <div class="form-group">
+              <input id = "sideC" class="form-control" name="sideC" type="number" min="1" max="1000" placeholder="SideC"></input>
+            </div>
+            <button type="submit" class="btn btn-focus">Submit</button>
+            <div class="area-div">Area:<span id ="numbers"></span></div>
+          </form>
+        </div>
+        <div class = "col-md-3 separator">
+          <h3>Equilateral</h3>
+          <ul id= "equilateral"></ul>
+        </div>
+        <div class = "col-md-3 separator">
+          <h3>Isosceles</h3>
+          <ul id= "isosceles"></ul>
+        </div>
+        <div class = "col-md-3 separator">
+          <h3>Scalene</h3>
+          <ul id= "scalene"></ul>
+        </div>
       </div>
-      <div class = "col-md-3">
-        <h3>Equilateral</h3>
-        <ul id= "equilateral"></ul>
-      </div>
-      <div class = "col-md-3">
-        <h3>Isosceles</h3>
-        <ul id= "isosceles"></ul>
-      </div>
-      <div class = "col-md-3">
-        <h3>Scalene</h3>
-        <ul id= "scalene"></ul>
-      </div>
-    </div>
-    <div class="row">
-      <div id ="canvas-box">
-        <canvas id="myCanvas" width="800" height="800"></canvas>
+      <div class="row">
+        <div id ="canvas-box">
+          <canvas id="myCanvas" width="800" height="800"></canvas>
+        </div>
       </div>
     </div>
   </body>
